@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Login</h1>
+    
+<div class="logo text-center">
+    <h1>Logo</h1>
+  </div>
+  <div class="wrapper">
+    <div class="inner-warpper text-center">
+      <h2 class="title">Login to your account</h2>
+      <form id="formvalidate">
+        <div class="input-group">
+          <label class="palceholder" for="userName">User Name</label>
+          <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+          <span class="lighting"></span>
+        </div>
+        <div class="input-group">
+          <label class="palceholder" for="userPassword">Password</label>
+          <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+          <span class="lighting"></span>
+        </div>
+  
+        <button type="submit" id="login">Login</button>
+        <div class="clearfix supporter">
+          <div class="pull-left remember-me">
+            <input id="rememberMe" type="checkbox">
+            <label for="rememberMe">Remember Me</label>
+          </div>
+          <a class="forgot pull-right" href="#">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+    <div class="signup-wrapper text-center">
+      <a href="#">Don't have an accout? <span class="text-primary">Create One</span></a>
+    </div>
+  </div>
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
