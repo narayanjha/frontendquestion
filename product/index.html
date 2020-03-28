@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product design</title>
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm"> <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-list-2">
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a href="../index.html" class="nav-link">Home</a></li>  
+          <li class="nav-item"><a href="/login/login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html">Form</a></li>
+          <li class="nav-item"><a class="nav-link" href="/form/dropdown.html">Custom input style</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html"></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+    <div class="container">
+        <div class="row" id="search">
+            <form id="search-form" action="" method="POST" enctype="multipart/form-data">
+                <div class="form-group col-xs-9">
+                    <input class="form-control" type="text" placeholder="Search" />
+                </div>
+                <div class="form-group col-xs-3">
+                    <button type="submit" class="btn btn-block btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="row" id="filter">
+            <form>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="make" class="filter-make filter form-control">
+                        <option value="">Select Make</option>
+                        <option value="">Show All</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="model" class="filter-model filter form-control">
+                        <option value="">Select Model</option>
+                        <option value="">Show All</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="type" class="filter-type filter form-control">
+                        <option value="">Select Type</option>
+                        <option value="">Show All</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="price" class="filter-price filter form-control">
+                        <option value="">Select Price Range</option>
+                        <option value="">Show All</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="row" id="products">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/product/js/main.js"></script>
+</body>
+
+</html>

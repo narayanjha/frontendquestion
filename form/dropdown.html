@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Custom Style</title>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: #f7f7ff;
+    }
+    h2{
+        margin: 16px;
+    }
+    .container{
+        margin-top:10px;
+        padding: 32px;
+    }
+    .select-box{
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+    }
+    .select-box .options-container{
+        background: #2d3640;
+        color:#f5f6fa;
+        max-height: 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.4s;
+        border-radius: 8px;
+        overflow: hidden;
+
+        order: 1;
+    }
+    .selected{
+        background: #2f3640;
+    }
+    .selected::after{
+  content: "V";
+  /* background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat; */
+color:#fff;
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+    }
+    .select-box .options-container.active{
+        max-height: 240px;
+        opacity: 1;
+        overflow-y: scroll;
+    }
+    .select-box .options-container::-webkit-scrollbar{
+        width:8px;
+        background: #0d141f;
+        border-radius: 0 8px 8px 0;
+    }
+    .select-box .options-container::-webkit-scrollbar-thumb{
+        background: #525861;
+        border-radius: 0 8px 8px 0;
+    }
+    .select-box .option,
+    .selected{
+        padding: 12px 24px;
+        cursor: pointer;
+    }
+    .select-box .option:hover{
+        background: #414b57;
+    }
+    .select-box label{
+        cursor: pointer;
+    }
+    .select-box .option .radio{
+        display: none;
+    }
+</style>
+</head>
+<body>
+    
+  <header>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm"> <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-list-2">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/login/login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html">Form</a></li>
+          <li class="nav-item"><a class="nav-link" href="/form/dropdown.html">Custom input style</a></li>
+          <li class="nav-item"><a class="nav-link" href="/product/index.html"></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+    <div class="container">
+        <h2>Select custom</h2>
+        <div class="select-box">
+            <div class="options-container active">
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="php">
+                    <label for="php">PHP</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="html">
+                    <label for="html">HTML</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="css">
+                    <label for="css">CSS</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="javascript">
+                    <label for="javascript">JavaScript</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="bootstrap">
+                    <label for="bootstrap">Bootstrap</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="jquery">
+                    <label for="jquery">jQuery</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="angular">
+                    <label for="angular">Angular</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="react">
+                    <label for="react">React</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="vue">
+                    <label for="vue">VUE</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="category" class="radio" id="json">
+                    <label for="json">JSON</label>
+                </div>
+            </div>
+            <div class="selected">
+                Select course category
+            </div>
+        </div>
+    </div>
+    <br>
+    <select name="" id="">
+        <option>PHP</option>
+        <option>Bootstrap</option>
+        <option>HTML</option>
+      <option>CSS</option>
+        <option>JavaScript</option>
+                <option>HTML</option>
+      <option>CSS</option>
+        <option>JavaScript</option>
+    </select>
+</body>
+</html>
