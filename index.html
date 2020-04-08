@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <base href="https://narayanjha.github.io/frontendquestion/">
+  <base href="https://narayanjha.github.io/frontendquestion/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Frontend Developer Interview Question Answer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/bootstrap-reboot.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/custom.css">
@@ -26,7 +27,8 @@
           <li class="nav-item"><a href="/frontendquestion/login/login.html" class="nav-link">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="/frontendquestion/product/index.html">Product</a></li>
           <li class="nav-item"><a class="nav-link" href="/frontendquestion/form/index.html">Form</a></li>
-          <li class="nav-item"><a class="nav-link" href="/frontendquestion/form/dropdown.html">Custom input style</a></li>
+          <li class="nav-item"><a class="nav-link" href="/frontendquestion/form/dropdown.html">Custom input style</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="/frontendquestion/product/index.html"></a></li>
         </ul>
       </div>
@@ -177,6 +179,31 @@
     </article>
   </section>
   <footer>
+    <section class="counters">
+      <div class="container d-flex justify-content-between text-center">
+        <div>
+          <i class="fa fa-youtube fa-4x"></i>
+          <div class="counter" data-traget="8000">0</div>
+          <h3>Subscribers</h3>
+        </div>
+        <div>
+          <i class="fa fa-facebook fa-4x"></i>
+          <div class="counter" data-traget="12000">0</div>
+          <h3>Followers</h3>
+        </div>
+        <div>
+          <i class="fa fa-twitter fa-4x"></i>
+          <div class="counter" data-traget="6000">0</div>
+          <h3>Likes</h3>
+        </div>
+        <div>
+          <i class="fa fa-linkedin fa-4x"></i>
+          <div class="counter" data-traget="9000">0</div>
+          <h3>Connections</h3>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
       <div class="float-left">Narayan Jha</div>
       <div class="float-right">jha_narayanji@yahoo.com</div>
@@ -189,6 +216,27 @@
     $(function () {
       //alert();
       $('#collapse').collapse()
+    });
+    const counters = document.querySelectorAll(".counter");
+    const speed = 1000;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const traget = +counter.getAttribute('data-traget');
+        const count = +counter.innerText;
+
+        const inc = traget / speed;
+        console.log(inc);
+        if (count < traget) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(
+            updateCount, 1
+          );
+        } else {
+          counter.innerText = traget;
+        }
+      }
+      updateCount();
     });
   </script>
 </body>
